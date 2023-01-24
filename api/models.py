@@ -6,3 +6,6 @@ class students(models.Model):
     lname=models.CharField(max_length=50)
     nrc=models.CharField(max_length=50)
     results=models.DecimalField(max_digits=10,decimal_places=3)
+
+    def __str__(self) -> str:
+        return self.id+self.fname+self.lname+self.nrc+self.results
